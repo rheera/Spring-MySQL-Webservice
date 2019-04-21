@@ -1,4 +1,4 @@
-package com.mysqlwebservices.mysqlws;
+package com.mysqlwebservices.mysqlws.model;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
