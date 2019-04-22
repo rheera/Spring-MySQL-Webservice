@@ -1,5 +1,6 @@
 package com.mysqlwebservices.mysqlws.model;
 
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -31,6 +32,8 @@ public class Employee {
     private String expertise;
 
     @NotBlank
+    @Temporal(TemporalType.TIMESTAMP)
+    @LastModifiedDate
     private Date createdAt;
 
 
