@@ -51,7 +51,7 @@ public class employeeController {
         emp.setName(empDetails.getName());
         emp.setDesignation(empDetails.getDesignation());
         emp.setExpertise(empDetails.getExpertise());
-        //without a save it doesnt save to the server 
+        //without a save it doesnt save to the server
         Employee updatedEmployee = employeeDAO.newEmployee(emp);
         return ResponseEntity.ok().body(updatedEmployee);
     }
