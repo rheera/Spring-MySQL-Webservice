@@ -51,10 +51,9 @@ public class employeeController {
         emp.setName(empDetails.getName());
         emp.setDesignation(empDetails.getDesignation());
         emp.setExpertise(empDetails.getExpertise());
-        //check to see if we don't have to do a save after updating this and
-        //Employee updatedEmployee = employeeDAO.newEmployee(emp);
-        //return ResponseEntity.ok().body(updatedEmployee);
-        return ResponseEntity.ok().body(emp);
+        //without a save it doesnt save to the server 
+        Employee updatedEmployee = employeeDAO.newEmployee(emp);
+        return ResponseEntity.ok().body(updatedEmployee);
     }
     @DeleteMapping("/employees/{id}")
     public ResponseEntity<Employee> deleteEmployee(@PathVariable(value = "id") Long empid){
